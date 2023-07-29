@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogDeCafé</title>
+
+    <!-- SEO -->
+    <!-- El Seo es la forma en la que google analiza los sitios web, ya que los trata de comprender para que se puedan encontrar en las busquedas y trata de ofrecer al usuario una buena experiencia -->
+    <!-- Generalmete para el seo se necesta indicar el nombre del sitio, la descripción del mismo, palabras clave para encontrar el sitio o que salga en las busquedas, etc -->
+
+    <meta name="description" content="Página web de blog de café">
+    
+    <!-- Prefetch -->
+    <!-- Hace que la carga del proximo sitio que visite el usuario cargue de manera prioritaria, como practica solo es recomendable que se cargue una página la que se considere tenga más visitas esto se puede saber con la herramienta de google analytics -->
+    <link rel="Prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
+    <!-- Hace la carga rápida de los servicios, estilos o librerias que se agreguen al proyecto -->
+    <link rel="preload" href="css/normalize.css" as="style"> <!-- Forma de hacer preload a estilos locales -->
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <!-- Forma de hacer preload a estilos externos o librerias -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- <link rel="preload" href="img/blog1.jpg" as="image"> -->
+
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+            <p class="no-margin"> Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+
+                    <!-- Picture es una etiqueta que se ocupa para digamos usar imagenes de diferentes formatos dependiendo del soporte del navegador -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp"> <!--Si el navegador soporta el formato webp se mostrará, de lo contrario cargará la imagen jpg pero esta jpg se debe de agregar dentro de picture, el frmato de imagen webp es un formato de imagenes las cuales hacen que pesen menos que las imagenes jgp y funcionan para mejorar el rendimiento de los sotios web, también esxiste el formato avif pero este no tiene tanto soporte como webp-->
+                        
+                        <!--Lazy Load-->
+                        <!-- Realiza la carga de la imagen conforme se hace scroll en el sitio web haciendo que las imagenes carguen poco a poco haciendo que la primera pintura sea lo primordial o las primeras secciones del sitio tengan prioridad al descargar contenido, estilos etc. -->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
+
+                </div>
+                <div class="entrada__contenido">
+                    <h4>Tipos de grano de cafe</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae iste recusandae vero nam molestias fuga, pariatur voluptatem illum molestiae voluptatum quia deserunt distinctio placeat fugiat! Quo deleniti cum dolores vero.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        < <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
+
+                </div>
+                <div class="entrada__contenido">
+                    <h4>3 deliciosas recetas de cafe</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae iste recusandae vero nam molestias fuga, pariatur voluptatem illum molestiae voluptatum quia deserunt distinctio placeat fugiat! Quo deleniti cum dolores vero.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        < <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4>Beneficios del cafe</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae iste recusandae vero nam molestias fuga, pariatur voluptatem illum molestiae voluptatum quia deserunt distinctio placeat fugiat! Quo deleniti cum dolores vero.</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+        </main>
+        <aside class="sidebar">
+            <h3>Nuestros cursos y talleres</h3>
+
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Tecnicas de extraccion de café</h4>
+                    <p class="widget-curso__label">Precio: 
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo: 
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
+                </li>
+                <li class="widget-curso">
+                    <h4 class="no-margin">4 recetas de café para pincipiantes</h4>
+                    <p class="widget-curso__label">Precio: 
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo: 
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más información sobre nuestros cursos</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!--Modernizr es una libreria de js, en este caso se usa para decir que el background-image se coloque como webp o como jpg funcionando similar a la etiqueta picture-->
+    <script src="js/modernizr.js"></script>
+</body>
+</html>
